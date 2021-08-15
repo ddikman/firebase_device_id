@@ -28,8 +28,7 @@ class _MyAppState extends State<MyApp> {
     // Platform messages may fail, so we use a try/catch PlatformException.
     // We also handle the message potentially returning null.
     try {
-      platformVersion =
-          await FirebaseDeviceId.platformVersion ?? 'Unknown platform version';
+      platformVersion = await getDeviceToken() ?? 'Failed to get token';
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }
