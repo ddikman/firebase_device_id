@@ -1,6 +1,6 @@
+import 'package:firebase_device_id/firebase_device_id.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:firebase_device_id/firebase_device_id.dart';
 
 void main() {
   const MethodChannel channel = MethodChannel('firebase_device_id');
@@ -9,7 +9,7 @@ void main() {
 
   setUp(() {
     channel.setMockMethodCallHandler((MethodCall methodCall) async {
-      return '42';
+      return 'abc';
     });
   });
 
@@ -17,7 +17,7 @@ void main() {
     channel.setMockMethodCallHandler(null);
   });
 
-  test('getPlatformVersion', () async {
-    expect(await FirebaseDeviceId.platformVersion, '42');
+  test('getDeviceToken', () async {
+    expect(await getDeviceToken(), 'abc');
   });
 }
