@@ -1,5 +1,6 @@
 import Flutter
 import UIKit
+import Firebase
 
 public class SwiftFirebaseDeviceIdPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
@@ -9,6 +10,12 @@ public class SwiftFirebaseDeviceIdPlugin: NSObject, FlutterPlugin {
   }
 
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
-    result("iOS " + UIDevice.current.systemVersion)
+    Installations.installations().authTokenForcingRefresh(true, completion: { (result, error) in
+      if let error = error {
+        result(error)
+
+      }
+      guard let result = result else { return }
+    })
   }
 }
