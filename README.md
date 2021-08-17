@@ -2,21 +2,20 @@
 
 Helper to get the firebase device ID to use for remote config testing.
 
-!! This project is in progress. I've tried some of the code for Android in a separate project and got it working but I've not completed this so it's working.
+## Why use this project?
 
-## Getting Started
+Quite probably, if you have come so far as to begin using AB tests in your Firebase setup, likely, you have also got Firebase messaging set up.
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+If this is the case and you want to try your AB tests using specific device tokens, go ahead and [FCM token](https://flutteragency.com/how-to-get-firebase-token-in-flutter/) to identify your device for testing.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Test devices in firebase console](./test-devices.png)
 
-## Base documentation
+If you want to get this token without relying on cloud messaging however, you can do so using the `Firebase installation` package which comes bundled with [firebase_core](https://pub.dev/packages/firebase_core).
 
-This project is a wrapper of the functionality in here:
+This project packages a solution, even if crude, and shows a practical example of how to get this token.
 
-https://firebase.google.com/docs/projects/manage-installations
+## Usage
+
+```dart
+final token = await getDeviceToken();
+```
