@@ -1,3 +1,5 @@
+pubspec = YAML.load_file(File.join('..', 'pubspec.yaml'))
+
 if defined?($FirebaseSDKVersion)
   Pod::UI.puts "#{pubspec['name']}: Using user specified Firebase SDK version '#{$FirebaseSDKVersion}'"
   firebase_sdk_version = $FirebaseSDKVersion
@@ -23,12 +25,12 @@ DESC
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.platform = :ios, '10.0'
+  s.ios.deployment_target = '9.0'
 
+  s.dependency 'Flutter'
   if not(firebase_sdk_version.nil?)
-    s.dependency 'Firebase', firebase_sdk_version
     s.dependency 'Firebase/Installations', firebase_sdk_version
   else
-    s.dependency 'Firebase'
     s.dependency 'Firebase/Installations'
   end
 

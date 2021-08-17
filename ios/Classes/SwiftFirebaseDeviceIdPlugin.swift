@@ -1,6 +1,6 @@
 import Flutter
 import UIKit
-import Installations
+import Firebase
 
 public class SwiftFirebaseDeviceIdPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
