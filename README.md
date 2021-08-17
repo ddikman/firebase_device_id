@@ -19,3 +19,7 @@ This project packages a solution, even if crude, and shows a practical example o
 ```dart
 final token = await getDeviceToken();
 ```
+
+## Source usage
+
+The code to get the token and setup, is taken from the official documentation for [Firebase installations](https://firebase.google.com/docs/projects/manage-installations).
