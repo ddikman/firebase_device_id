@@ -23,7 +23,7 @@ class FirebaseDeviceIdPlugin: FlutterPlugin, MethodCallHandler {
     channel.setMethodCallHandler(this)
   }
 
-  private fun getDeviceToken(callback: (token, error) -> Unit) {
+  private fun getDeviceToken(callback: (String?, String?) -> Unit) {
     // Based on:
     // https://firebase.google.com/docs/projects/manage-installations#retrieve-fis-token
     FirebaseInstallations.getInstance().getToken(/* force refresh */ true)
@@ -31,16 +31,16 @@ class FirebaseDeviceIdPlugin: FlutterPlugin, MethodCallHandler {
         if (task.isSuccessful) {
           callback(task.result?.token, null)
         } else {
-          callback(null, 'Unable to get token')
+          callback(null, "Unable to get token")
         }
     }
   }
 
   override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
-    if (call.method == "getDeviceId") {
+    if (call.method == "getDeviceToken") {
       getDeviceToken { token, error ->
         if (error != null) {
-          result.failure(Exception(error))
+          result.error("1", error, null)
         } else {
           result.success(token)
         }

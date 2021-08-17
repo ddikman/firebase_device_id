@@ -7,17 +7,17 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:723258656431:android:60e9058ab61f1345abf65a",
+        "mobilesdk_app_id": "1:723258656431:android:28a46ef53e572356abf65a",
         "android_client_info": {
-          "package_name": "se.greycastle.firebase_device_id"
+          "package_name": "se.greycastle.firebase_device_id_example"
         }
       },
       "oauth_client": [
         {
-          "client_id": "723258656431-u2mj1uggaine45e8soacg140gp73l2hs.apps.googleusercontent.com",
+          "client_id": "723258656431-v61lsbipp2gkeqado8ib0t1k4589444c.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "se.greycastle.firebase_device_id",
+            "package_name": "se.greycastle.firebase_device_id_example",
             "certificate_hash": "6ddd078dca4540fa79c193eafdb8c8037f35ec1d"
           }
         },
@@ -37,6 +37,13 @@
             {
               "client_id": "723258656431-vcec4v9nslac4rpr914as008pjau7jct.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "723258656431-cus45s0rhk8raaq4d9f25ers3tom36v6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "se.greycastle.firebaseDeviceIdExample"
+              }
             }
           ]
         }
