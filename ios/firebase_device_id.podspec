@@ -25,7 +25,7 @@ DESC
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.platform = :ios, '10.0'
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
 
   s.dependency 'Flutter'
   if not(firebase_sdk_version.nil?)

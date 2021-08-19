@@ -69,7 +69,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Firebase: 817b9171d0d51dccc458b94a5e8edff6b1dd323d
   firebase_core: 72374607c8c6f5a0adc0559e5c5bf57deda975e3
-  firebase_device_id: d2b4de2342535183502cb1f7f5faa2ef408f4625
+  firebase_device_id: 89db70463a0213591da5d81e19c3ffd0fbf14dbb
   FirebaseCore: a6dba751680d7033b9d3831e1cfc95ead0605118
   FirebaseCoreDiagnostics: 7bf55d386f9fc690d971b70a582142321a390eb8
   FirebaseInstallations: b69db7680870dbac17bba7a51fc0b5c4b365baa7
