@@ -1,3 +1,7 @@
+## 0.0.3
+
+* Made image links absolute.
+
 ## 0.0.2
 
 * Fixed image links in readme.

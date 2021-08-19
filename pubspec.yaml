@@ -1,6 +1,6 @@
 name: firebase_device_id
 description: Helper to get the firebase device ID to use for remote config testing.
-version: 0.0.2
+version: 0.0.3
 repository: https://github.com/ddikman/firebase_device_id
 
 environment:
