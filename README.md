@@ -1,6 +1,6 @@
 # firebase_device_id
 
-Helper to get the firebase device ID to use for remote config testing.
+Helper package to get the firebase device ID in Flutter to use for remote config testing. Exposes this functionality which is otherwise missing in the [FlutterFire](https://firebase.flutter.dev/docs/overview/) packages. 
 
 ![Auth token in example app](./app-example.png)
 
