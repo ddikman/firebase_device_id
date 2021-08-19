@@ -2,6 +2,8 @@
 
 Helper to get the firebase device ID to use for remote config testing.
 
+![Auth token in example app](./app-example.png)
+
 ## Why use this project?
 
 Quite probably, if you have come so far as to begin using AB tests in your Firebase setup, likely, you have also got Firebase messaging set up.
@@ -19,6 +21,8 @@ This project packages a solution, even if crude, and shows a practical example o
 ```dart
 final token = await getDeviceToken();
 ```
+
+Then for how to actually use it? I would recommend getting the device token with the method above and copying it to clipboard. Then you can send it to slack or something to add into Firebase AB test to use. 
 
 ## Source usage
 
