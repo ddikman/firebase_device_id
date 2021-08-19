@@ -1,3 +1,4 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+* Can get device token on iOS and Android.
+* Includes example app.
